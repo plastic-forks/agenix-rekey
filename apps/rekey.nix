@@ -23,7 +23,7 @@
   # the given host configuration
   derivationFor = hostCfg:
     import ../nix/output-derivation.nix {
-      appHostPkgs = pkgs;
+      appHostPkgs = hostCfg.pkgs;
       hostConfig = hostCfg.config;
     };
 
